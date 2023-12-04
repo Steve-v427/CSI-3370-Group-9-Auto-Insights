@@ -78,9 +78,6 @@
         Copyright of Auto Insights &copy; 2023</span    >
   </footer>
 
-</html>
-
-
 
 
 </body>
