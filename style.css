@@ -1,0 +1,521 @@
+/* ########################################### */
+/*                 Global                      */
+/* ########################################### */
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color:rgb(0,0,0);
+    color:#FEFEFE;
+}
+
+a{
+    color:#FF0042;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1{
+    font-size:16px;
+    font-weight: bolder;
+}
+
+
+/* ########################################### */
+/*           Reviews.html                       */
+/* ########################################### */
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+
+.subreview{
+    margin-top:20px;
+}
+
+.subreview-title{
+    background-color:#292B2E;
+    padding: 5px;
+    border-radius: 5px;
+    margin:4px;
+}
+
+.subreview-row{
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+
+.subreview-column{
+    padding: 10px;
+    margin:4px;
+    border-radius: 5px;
+    background-color:#111314;
+}
+
+.subreview-description *{
+    margin-block: 0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subreview-icon i{
+    font-size: 45px;
+}
+
+.subreview-devider{
+    display: none;   
+}
+
+
+/* For the smartphones */
+@media screen and (max-width: 460px) {
+    .container{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .subreview-row{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 65% 35%;
+    }
+
+    .subreview-devider{
+        display: block;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
+    }
+
+    
+
+  }
+
+/* For the tablets */
+@media screen and (min-width: 460px) and (max-width: 1024px) {
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .subreview-row{
+        display: grid;
+        grid-template-columns: 10% 60% 10% 20%;
+    }
+
+    .subreview-icon i{
+        font-size: 35px;
+    }
+
+    html{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+
+  }
+/*   Header Section    */
+
+header{
+    margin-inline: 10px;
+}
+  /* Nav Bar styles */
+.navbar{
+    display:flex;
+    align-items: center;
+}
+.navigation{
+    background-color: rgb(154, 0, 0);
+    padding: 10px;
+    width: 65%;
+    display: inline-block;
+    border-radius: 5px;
+    max-height: 80px;
+    margin-right:10px;
+}
+
+.close-icon i{
+    font-size:60px;
+    float: left;
+    cursor: pointer;
+}
+
+.nav-list{
+    list-style-type:none;
+    overflow: hidden;
+}
+
+.nav-item a{
+    float: right;
+    display:block;
+    text-align: center;
+    margin-inline: 20px;
+    font-size: 20px;
+    color:#fff;
+}
+
+.nav-item a:hover{
+    background-color: rgb(0,0,0,0.1);
+}
+
+.hide{
+    display: none;
+}
+
+.bar-icon{
+    font-size: 60px;
+    display: inline-block;
+    margin-right:10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family:aquire;
+    src:url(aquire.otf);
+}
+
+.brand{
+    font-size:60px;
+    display: inline-block;
+    font-family:aquire;
+}
+
+/*Navbar for the smartphones*/
+@media screen and (max-width: 460px){
+    .navigation{
+        max-height: auto;
+    }
+    
+    .close-icon i{
+        font-size:30px;
+    }
+    
+    .nav-item a{
+        float:left;
+        display:inline;
+        margin-inline: 3px;
+        font-size: 10px;
+        padding: 5px;
+    }
+    
+    
+    .bar-icon{
+        font-size: 30px;
+    }
+ 
+    .brand{
+        font-size:20px;
+    }
+}
+
+  /* Search Box styles */
+.search-box{
+    border: solid 1px lightgray;
+    margin-top: 20px;
+    padding: 40px;
+    display:flex;
+    justify-content: center;
+    box-shadow:1px 2px 3px lightgray;
+}
+
+.search-box select{
+    padding: 10px;
+}
+
+.search-box input{
+    padding: 10px;
+}
+
+.search-box button{
+    padding: 10px;
+    background-color:#fff;
+    color:#000000;
+}
+
+.search-box button:hover{
+    background-color: #000000;
+    color: #fff;
+    box-shadow: 1px 2px 3px #fff;
+}
+
+/* search box for smrtphones */
+@media screen and (max-width: 460px){
+    .search-box input, .search-box button, .search-box select{
+        min-width: 300px;
+        margin-top: 5px;
+    }    
+
+}
+
+/* review info Styling */
+.review-info{
+    padding: 20px;
+    background-color: #111314;
+}
+
+.chart{
+    font-size:20px;
+    font-weight:bold;
+}
+/* Footer Styling */
+
+footer{
+    margin-top: 20px;
+    padding: 20px;
+    background-color:  #7c0404;
+    display: block;
+    text-align: center;
+}
+
+/* navigation path*/
+.navigate{
+    margin-block: 20px;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.navigate a{
+    color: #fff;
+}
+
+.navigate a:hover{
+    color:#FF0042;
+    font-weight: bolder;
+}
+
+/* Pagination*/
+
+.pagination{
+    padding: 20px;
+    font-size: 15px;
+}
+
+.pagination a{
+    color: #fff;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    border: solid 0.5px #fff;
+}
+
+.pagination a:hover{
+    opacity: 0.5;
+}
+
+.note{
+    background-color:#111314;
+    padding: 20px;
+    display: block;
+}
+
+.note span{
+    font-size: 20px;
+    margin-block: 5px;
+}
+
+
+/* ########################################### */
+/*            comment.html                      */
+/* ########################################### */
+
+.head{
+    display: flex;
+    background-color: #2C2C2C;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.authors{
+    flex: 20%;
+}
+
+.content{
+    flex: 80%;
+}
+
+.body{
+    display: flex;
+    background-color: #131415;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.body .authors .username{
+    font-size: 20px;
+}
+
+.body .authors img{
+    max-width: 50px;
+    max-height: 80px;
+}
+
+.body .content .comment button{
+    border:none;
+    padding:10px;
+    font-weight: bolder;
+    box-shadow: 4px 6px #fff;
+    cursor: pointer;
+    float: right;
+}
+
+/* comment section */
+
+#comment_form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #af4c4c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.comment-area{
+    margin-bottom:50px;
+}
+
+.comment{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.comment-area textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+
+.comment-area input{
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.comment-area input:hover{
+    border: solid 1px #000000;
+}
+
+.comment-section {
+    text-align: center;
+}
+
+.comment-section table {
+    width: auto;
+    max-width: 100%; /* Optional: Set a maximum width if needed */
+    margin: 0 auto;
+    border-collapse: collapse; 
+}
+
+.comment-section table, .comment-section th, .comment-section td {
+    border: 1px solid white; /* Optional: Add borders to the table, th, and td */
+}
+
+#comment_form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #af4c4c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.comment-area{
+    margin-bottom:50px;
+}
+
+.comment{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.comment-area textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+
+.comment-area input{
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.comment-area input:hover{
+    border: solid 1px #000000;
+}
+
+
+#Comment_Logout {
+  padding: 10px 20px;
+  margin-right: 50px;
+  background-color: #af4c4c;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
